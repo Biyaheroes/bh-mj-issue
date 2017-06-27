@@ -1,0 +1,35 @@
+{
+  "name": "bh-mj-issue",
+  "version": "0.0.0",
+  "description": "Biyaheroes MJML Issue Component.",
+  "main": "issue.deploy.js",
+  "support": "issue.support.js",
+  "authors": [
+    "Robot Biyaheroes <robot@biyaheroes.com>",
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "biyaheroes",
+    "mjml",
+    "issue",
+    "component",
+    "bh-mj-issue"
+  ],
+  "homepage": "https://github.com/Biyaheroes/bh-mj-issue",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "mtch": "^0.2.0",
+    "protype": "^0.22.0",
+    "sxty4": "^0.10.0",
+    "react": "^15.6.1",
+    "wichevr": "^0.10.0"
+  }
+}
