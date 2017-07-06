@@ -1,6 +1,6 @@
 {
   "name": "bh-mj-issue",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Biyaheroes MJML Issue Component.",
   "main": "issue.deploy.js",
   "support": "issue.support.js",
@@ -26,10 +26,9 @@
   ],
   "dependencies": {
     "jquery": "^3.2.1",
-    "mtch": "^0.2.0",
-    "protype": "^0.22.0",
+    "mtch": "^0.3.0",
     "sxty4": "^0.10.0",
     "react": "^15.6.1",
-    "wichevr": "^0.10.0"
+    "wichevr": "^0.12.0"
   }
 }

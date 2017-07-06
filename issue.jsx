@@ -54,7 +54,6 @@
 			"Column": "mjml-column",
 			"MJMLElement": "mjml-core",
 			"mtch": "mtch",
-			"protype": "protype",
 			"React": "react",
 			"Section": "mjml-section",
 			"sxty4": "sxty4",
@@ -72,7 +71,6 @@ import Section from "mjml-section";
 import Text from "mjml-text";
 
 import mtch from "mtch";
-import protype from "protype";
 import sxty4 from "sxty4";
 import wichevr from "wichevr";
 
@@ -104,7 +102,7 @@ class Issue extends Component {
 			error = sxty4( error.stack ).encode( );
 		}
 
-		if( protype( error, STRING ) ){
+		if( typeof error == "string" ){
 			let pattern = new RegExp( `.{1,${ Math.floor( Math.sqrt( error.length ) ) }}`, "g" );
 			error = mtch( error, pattern ).join( "\t" );
 		}

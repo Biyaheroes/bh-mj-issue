@@ -7,7 +7,6 @@ mjml-core \
 mjml-section \
 mjml-text \
 mtch \
-protype \
 sxty4 \
 react \
 wichevr \
@@ -48,7 +47,6 @@ yargs \
 bower install \
 jquery \
 mtch \
-protype \
 sxty4 \
 react \
 wichevr \
