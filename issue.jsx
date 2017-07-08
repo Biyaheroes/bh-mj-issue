@@ -66,6 +66,7 @@
 import React, { Component } from "react";
 
 import { MJMLElement } from "mjml-core";
+
 import Column from "mjml-column";
 import Section from "mjml-section";
 import Text from "mjml-text";
@@ -85,7 +86,7 @@ const defaultMJMLDefinition = {
 	"attributes": {
 		"error": "",
 		"message": "Sorry, there's an error. Please report this immediately."
-	},
+	}
 };
 
 @MJMLElement
