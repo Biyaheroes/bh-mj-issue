@@ -1,34 +1,39 @@
 {
-  "name": "bh-mj-issue",
-  "version": "0.3.0",
-  "description": "Biyaheroes MJML Issue Component.",
-  "main": "issue.deploy.js",
-  "support": "issue.support.js",
-  "authors": [
-    "Robot Biyaheroes <robot@biyaheroes.com>",
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "biyaheroes",
-    "mjml",
-    "issue",
-    "component",
-    "bh-mj-issue"
-  ],
-  "homepage": "https://github.com/Biyaheroes/bh-mj-issue",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jquery": "^3.2.1",
-    "mtch": "^0.3.0",
-    "sxty4": "^0.10.0",
-    "react": "^15.6.1",
-    "wichevr": "^0.12.0"
-  }
+	"name": "bh-mj-issue",
+	"version": "0.4.0",
+	"description": "Biyaheroes MJML Issue Component.",
+	"main": "issue.deploy.js",
+	"support": "issue.jsx",
+	"authors": [
+		"Robot Biyaheroes <robot@biyaheroes.com>",
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"biyaheroes",
+		"mjml",
+		"issue",
+		"component",
+		"bh-mj-issue"
+	],
+	"homepage": "https://github.com/Biyaheroes/bh-mj-issue",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"resolutions": {
+		"wichevr": "^0.14.0",
+		"raze": "^0.34.0",
+		"truly": "^0.20.0"
+	},
+	"dependencies": {
+		"jquery": "^3.2.1",
+		"mtch": "^0.4.0",
+		"sxty4": "^0.10.0",
+		"react": "^15.6.1",
+		"wichevr": "^0.14.0"
+	}
 }

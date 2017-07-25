@@ -29,23 +29,23 @@
 
 	@module-configuration:
 		{
-			"package": "detail",
-			"path": "detail/detail.jsx",
-			"file": "detail.jsx",
-			"module": "detail",
+			"package": "issue",
+			"path": "issue/issue.jsx",
+			"file": "issue.jsx",
+			"module": "issue",
 			"author": "Biyaheroes Developers",
 			"contributors": [
 				"Robot Biyaheroes <robot@biyaheroes.com>",
 				"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
 			],
 			"eMail": "developers@biyaheroes.com",
-			"repository": "https://github.com/Biyaheroes/bh-mj-detail.git",
+			"repository": "https://github.com/Biyaheroes/bh-mj-issue.git",
 			"global": true
 		}
 	@end-module-configuration
 
 	@module-documentation:
-		Biyaheroes MJML Detail List Component.
+		Biyaheroes MJML Issue Component.
 	@end-module-documentation
 
 	@include:
@@ -108,35 +108,37 @@ class Issue extends Component {
 			error = mtch( error, pattern ).join( "\t" );
 		}
 
-		return ( <Section
-					{ ...this.props }
-				>
-					<Column>
-						{
-							[
-								<Text
-									key="prompt"
-								>
-									{ message }
-								</Text>,
+		return (
+			<Section
+				{ ...this.props }
+			>
+				<Column>
+					{
+						[
+							<Text
+								key="prompt"
+							>
+								{ message }
+							</Text>,
 
-								<Text
-									key="error"
-									font-size="11px"
-								>
-									{ `Error: ${ error }` }
-								</Text>,
+							<Text
+								key="error"
+								font-size="11px"
+							>
+								{ `Error: ${ error }` }
+							</Text>,
 
-								<Text
-									key="timestamp"
-									font-size="11px"
-								>
-									{ `Timestamp: ${ new Date( ) }` }
-								</Text>
-							]
-						}
-					</Column>
-				</Section> );
+							<Text
+								key="timestamp"
+								font-size="11px"
+							>
+								{ `Timestamp: ${ new Date( ) }` }
+							</Text>
+						]
+					}
+				</Column>
+			</Section>
+		);
 	}
 }
 
