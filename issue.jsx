@@ -63,7 +63,7 @@
 	@end-include
 */
 
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 import { MJMLElement } from "mjml-core";
 
@@ -90,11 +90,11 @@ const defaultMJMLDefinition = {
 };
 
 @MJMLElement
-class Issue extends Component {
-	render( ){
-		const { mjAttribute } = this.props;
+class Issue extends PureComponent {
+	resolve( property ){
+		const { mjAttribute } = property;
 
-		let { error, message } = this.props;
+		let { error, message } = property;
 
 		error = wichevr( error, mjAttribute( "error" ) );
 		message = wichevr( message, mjAttribute( "message" ) );
@@ -107,6 +107,23 @@ class Issue extends Component {
 			let pattern = new RegExp( `.{1,${ Math.floor( Math.sqrt( error.length ) ) }}`, "g" );
 			error = mtch( error, pattern ).join( "\t" );
 		}
+
+		return {
+			"error": error,
+			"message": message
+		};
+	}
+
+	componentWillMount( ){
+		this.setState( { "data": this.resolve( this.props ) } );
+	}
+
+	componentWillReceiveProps( property ){
+		this.setState( { "data": this.resolve( property ) } );
+	}
+
+	render( ){
+		let { error, message } = this.state.data;
 
 		return (
 			<Section

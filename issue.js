@@ -90,11 +90,11 @@ var defaultMJMLDefinition = {
 
 
 
-Issue = (0, _mjmlCore.MJMLElement)(_class = function (_Component) {(0, _inherits3.default)(Issue, _Component);function Issue() {(0, _classCallCheck3.default)(this, Issue);return (0, _possibleConstructorReturn3.default)(this, (Issue.__proto__ || (0, _getPrototypeOf2.default)(Issue)).apply(this, arguments));}(0, _createClass3.default)(Issue, [{ key: "render", value: function render()
-		{var
-			mjAttribute = this.props.mjAttribute;var _props =
+Issue = (0, _mjmlCore.MJMLElement)(_class = function (_PureComponent) {(0, _inherits3.default)(Issue, _PureComponent);function Issue() {(0, _classCallCheck3.default)(this, Issue);return (0, _possibleConstructorReturn3.default)(this, (Issue.__proto__ || (0, _getPrototypeOf2.default)(Issue)).apply(this, arguments));}(0, _createClass3.default)(Issue, [{ key: "resolve", value: function resolve(
+		property) {var
+			mjAttribute = property.mjAttribute;var
 
-			this.props,error = _props.error,message = _props.message;
+			error = property.error,message = property.message;
 
 			error = (0, _wichevr2.default)(error, mjAttribute("error"));
 			message = (0, _wichevr2.default)(message, mjAttribute("message"));
@@ -107,6 +107,23 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_Component) {(0, _inherits
 				var pattern = new RegExp(".{1," + Math.floor(Math.sqrt(error.length)) + "}", "g");
 				error = (0, _mtch2.default)(error, pattern).join("\t");
 			}
+
+			return {
+				"error": error,
+				"message": message };
+
+		} }, { key: "componentWillMount", value: function componentWillMount()
+
+		{
+			this.setState({ "data": this.resolve(this.props) });
+		} }, { key: "componentWillReceiveProps", value: function componentWillReceiveProps(
+
+		property) {
+			this.setState({ "data": this.resolve(property) });
+		} }, { key: "render", value: function render()
+
+		{var _state$data =
+			this.state.data,error = _state$data.error,message = _state$data.message;
 
 			return (
 				_react2.default.createElement(_mjmlSection2.default,
@@ -139,7 +156,7 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_Component) {(0, _inherits
 
 
 
-		} }]);return Issue;}(_react.Component)) || _class;
+		} }]);return Issue;}(_react.PureComponent)) || _class;
 
 
 Issue.tagName = tagName;

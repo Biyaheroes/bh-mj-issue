@@ -4,8 +4,8 @@
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-07-25T01:54:59.036Z",
-	"end": "2017-07-25T01:55:22.686Z",
+	"start": "2017-08-02T08:55:07.031Z",
+	"end": "2017-08-02T08:55:43.797Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,53 +28,53 @@
 		{
 			"name": "bh-mj-issue",
 			"duration": 0,
-			"start": "2017-07-25T01:55:22.305Z",
+			"start": "2017-08-02T08:55:43.465Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "bh-mj-issue",
-			"duration": 157,
-			"start": "2017-07-25T01:55:22.306Z",
-			"end": "2017-07-25T01:55:22.463Z",
+			"duration": 98,
+			"start": "2017-08-02T08:55:43.465Z",
+			"end": "2017-08-02T08:55:43.563Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-07-25T01:55:22.307Z",
-					"end": "2017-07-25T01:55:22.307Z",
+					"start": "2017-08-02T08:55:43.467Z",
+					"end": "2017-08-02T08:55:43.467Z",
 					"duration": 0,
 					"title": "\"before each\" hook",
 					"associatedSuite": "bh-mj-issue",
 					"associatedTest": "should be equal"
 				},
 				{
-					"start": "2017-07-25T01:55:22.311Z",
-					"end": "2017-07-25T01:55:22.311Z",
-					"duration": 0,
-					"title": "\"after each\" hook",
-					"associatedSuite": "bh-mj-issue",
-					"associatedTest": "should be equal"
-				},
-				{
-					"start": "2017-07-25T01:55:22.354Z",
-					"end": "2017-07-25T01:55:22.354Z",
-					"duration": 0,
-					"title": "\"before each\" hook",
-					"associatedSuite": "bh-mj-issue",
-					"associatedTest": "should be equal"
-				},
-				{
-					"start": "2017-07-25T01:55:22.372Z",
-					"end": "2017-07-25T01:55:22.372Z",
-					"duration": 0,
-					"title": "\"after each\" hook",
-					"associatedSuite": "bh-mj-issue",
-					"associatedTest": "should be equal"
-				},
-				{
-					"start": "2017-07-25T01:55:22.468Z",
-					"end": "2017-07-25T01:55:22.469Z",
+					"start": "2017-08-02T08:55:43.471Z",
+					"end": "2017-08-02T08:55:43.472Z",
 					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "bh-mj-issue",
+					"associatedTest": "should be equal"
+				},
+				{
+					"start": "2017-08-02T08:55:43.499Z",
+					"end": "2017-08-02T08:55:43.500Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "bh-mj-issue",
+					"associatedTest": "should be equal"
+				},
+				{
+					"start": "2017-08-02T08:55:43.521Z",
+					"end": "2017-08-02T08:55:43.521Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "bh-mj-issue",
+					"associatedTest": "should be equal"
+				},
+				{
+					"start": "2017-08-02T08:55:43.611Z",
+					"end": "2017-08-02T08:55:43.613Z",
+					"duration": 2,
 					"title": "\"after all\" hook",
 					"associatedSuite": "bh-mj-issue"
 				}
@@ -82,23 +82,23 @@
 		},
 		{
 			"name": "render based comparison",
-			"duration": 9,
-			"start": "2017-07-25T01:55:22.306Z",
-			"end": "2017-07-25T01:55:22.315Z",
+			"duration": 7,
+			"start": "2017-08-02T08:55:43.466Z",
+			"end": "2017-08-02T08:55:43.473Z",
 			"tests": [
 				{
 					"name": "should be equal",
-					"start": "2017-07-25T01:55:22.307Z",
-					"end": "2017-07-25T01:55:22.310Z",
-					"duration": 3,
+					"start": "2017-08-02T08:55:43.466Z",
+					"end": "2017-08-02T08:55:43.471Z",
+					"duration": 5,
 					"state": "pass"
 				}
 			],
 			"hooks": [
 				{
-					"start": "2017-07-25T01:55:22.311Z",
-					"end": "2017-07-25T01:55:22.314Z",
-					"duration": 3,
+					"start": "2017-08-02T08:55:43.472Z",
+					"end": "2017-08-02T08:55:43.473Z",
+					"duration": 1,
 					"title": "\"after all\" hook",
 					"associatedSuite": "render based comparison"
 				}
@@ -106,22 +106,22 @@
 		},
 		{
 			"name": "component based comparison",
-			"duration": 63,
-			"start": "2017-07-25T01:55:22.315Z",
-			"end": "2017-07-25T01:55:22.378Z",
+			"duration": 50,
+			"start": "2017-08-02T08:55:43.474Z",
+			"end": "2017-08-02T08:55:43.524Z",
 			"tests": [
 				{
 					"name": "should be equal",
-					"start": "2017-07-25T01:55:22.331Z",
-					"end": "2017-07-25T01:55:22.361Z",
-					"duration": 30,
+					"start": "2017-08-02T08:55:43.486Z",
+					"end": "2017-08-02T08:55:43.512Z",
+					"duration": 26,
 					"state": "pass"
 				}
 			],
 			"hooks": [
 				{
-					"start": "2017-07-25T01:55:22.378Z",
-					"end": "2017-07-25T01:55:22.378Z",
+					"start": "2017-08-02T08:55:43.524Z",
+					"end": "2017-08-02T08:55:43.524Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "component based comparison"

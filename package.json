@@ -1,6 +1,6 @@
 {
 	"name": "bh-mj-issue",
-	"version": "0.4.0",
+	"version": "0.5.0",
 	"description": "Biyaheroes MJML Issue Component.",
 	"main": "issue.js",
 	"support": "issue.jsx",
@@ -8,6 +8,7 @@
 	"browser": "issue.deploy.js",
 	"scripts": {
 		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"reset": "rsetmod clean",
 		"clear": "rsetmod clean --clear",
 		"formal": "jesy apply '*.json'",
 		"build:support": "webpack --config webpack.loose.js --progress",
@@ -27,6 +28,7 @@
 		"test:client": "npm run shot && ./node_modules/.bin/wdio wdio.client.js",
 		"test": "npm run test:client",
 		"posttest": "npm run formal",
+		"construct": "npm run pristine && npm run base && npm run build && npm run build:test && npm run test:client && npm run formal",
 		"deploy": "npm run pristine && npm run build && npm run build:test && npm run test:client && npm run formal"
 	},
 	"repository": {
@@ -51,16 +53,16 @@
 	},
 	"homepage": "https://github.com/Biyaheroes/bh-mj-issue#readme",
 	"dependencies": {
-		"babel-runtime": "^6.23.0",
+		"babel-runtime": "^6.25.0",
 		"jquery": "^3.2.1",
 		"mjml": "^3.3.3",
 		"mjml-column": "^3.3.3",
 		"mjml-core": "^3.3.3",
 		"mjml-section": "^3.3.3",
 		"mjml-text": "^3.3.3",
-		"mtch": "^0.4.0",
+		"mtch": "^0.6.0",
 		"react": "^15.6.1",
-		"sxty4": "^0.10.0",
+		"sxty4": "^0.11.0",
 		"wichevr": "^0.14.0"
 	},
 	"devDependencies": {
@@ -85,9 +87,9 @@
 		"gulp-replace": "^0.6.1",
 		"gulp-sourcemaps": "^2.6.0",
 		"looks-same": "^3.2.1",
-		"mocha": "^3.4.2",
+		"mocha": "^3.5.0",
 		"nchunk": "^0.0.0",
-		"plough": "^0.28.0",
+		"plough": "^0.29.0",
 		"postcss-loader": "^2.0.6",
 		"resolve-url-loader": "^2.1.0",
 		"sass-loader": "^6.0.6",
@@ -100,7 +102,7 @@
 		"wdio-mocha-framework": "^0.5.10",
 		"wdio-selenium-standalone-service": "^0.0.9",
 		"webdriverio": "^4.8.0",
-		"webpack": "^3.3.0",
+		"webpack": "^3.4.1",
 		"webpack-bundle-analyzer": "^2.8.3",
 		"webpack-dev-server": "^2.6.1",
 		"yargs": "^8.0.2"

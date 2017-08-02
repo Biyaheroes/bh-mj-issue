@@ -122,7 +122,8 @@ module.exports = function build( parameter ){
 				"jquery",
 				"react",
 				"mjml,lodash,jquery,react",
-				{ "extension": "deploy.js" } ),
+				{ "extension": "deploy.js" }
+			),
 
 			new UglifyJsPlugin( {
 				"compress": {
