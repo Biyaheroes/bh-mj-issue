@@ -13,7 +13,7 @@ module.exports = function build( parameter ){
 	parameter = parameter || { };
 
 	return {
-		"entry": "./issue.jsx",
+		"entry": "./issue.module.jsx",
 
 		"resolve": {
 			"descriptionFiles": [
@@ -59,15 +59,11 @@ module.exports = function build( parameter ){
 							"options": { "sourceMap": true }
 						},
 						{
-							"loader": "postcss-loader",
+							"loader": "resolve-url-loader",
 							"options": { "sourceMap": true }
 						},
 						{
 							"loader": "sass-loader",
-							"options": { "sourceMap": true }
-						},
-						{
-							"loader": "resolve-url-loader",
 							"options": { "sourceMap": true }
 						}
 					]
@@ -82,10 +78,6 @@ module.exports = function build( parameter ){
 						},
 						{
 							"loader": "css-loader",
-							"options": { "sourceMap": true }
-						},
-						{
-							"loader": "postcss-loader",
 							"options": { "sourceMap": true }
 						},
 						{
