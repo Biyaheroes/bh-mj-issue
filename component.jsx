@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Issue from "./issue.jsx";
+import Issue from "./issue.module.jsx";
 
 ReactDOM.render(
 	<Issue
