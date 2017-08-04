@@ -5,22 +5,22 @@
 		"passes": 2,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-04T00:25:17.361Z",
-		"end": "2017-08-04T00:25:18.241Z",
-		"duration": 880
+		"start": "2017-08-04T03:37:03.638Z",
+		"end": "2017-08-04T03:37:04.399Z",
+		"duration": 761
 	},
 	"tests": [
 		{
 			"title": "should be equal",
 			"fullTitle": "bh-mj-issue render based comparison should be equal",
-			"duration": 480,
+			"duration": 419,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal",
 			"fullTitle": "bh-mj-issue component based comparison should be equal",
-			"duration": 395,
+			"duration": 338,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -31,14 +31,14 @@
 		{
 			"title": "should be equal",
 			"fullTitle": "bh-mj-issue render based comparison should be equal",
-			"duration": 480,
+			"duration": 419,
 			"currentRetry": 0,
 			"err": {}
 		},
 		{
 			"title": "should be equal",
 			"fullTitle": "bh-mj-issue component based comparison should be equal",
-			"duration": 395,
+			"duration": 338,
 			"currentRetry": 0,
 			"err": {}
 		}
