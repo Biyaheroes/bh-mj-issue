@@ -1,6 +1,6 @@
 {
 	"name": "bh-mj-issue",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "Biyaheroes MJML Issue Component.",
 	"main": "issue.js",
 	"support": "issue.module.jsx",
@@ -54,6 +54,7 @@
 	"homepage": "https://github.com/Biyaheroes/bh-mj-issue#readme",
 	"dependencies": {
 		"babel-runtime": "^6.25.0",
+		"booleanize": "^0.1.0",
 		"jquery": "^3.2.1",
 		"mjml": "^3.3.3",
 		"mjml-column": "^3.3.3",

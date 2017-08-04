@@ -1,5 +1,6 @@
 yarn add \
 babel-runtime \
+booleanize \
 jquery \
 mjml \
 mjml-column \
@@ -55,6 +56,7 @@ webpack-dev-server \
 yargs \
 --dev && \
 bower install \
+booleanize \
 jquery \
 mtch \
 sxty4 \

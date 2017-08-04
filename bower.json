@@ -1,6 +1,6 @@
 {
 	"name": "bh-mj-issue",
-	"version": "0.6.0",
+	"version": "0.7.0",
 	"description": "Biyaheroes MJML Issue Component.",
 	"main": "issue.deploy.js",
 	"support": "issue.module.jsx",
@@ -25,9 +25,11 @@
 		"tests"
 	],
 	"resolutions": {
-		"falzy": "^0.23.0"
+		"falzy": "^0.23.0",
+		"truly": "^0.20.0"
 	},
 	"dependencies": {
+		"booleanize": "^0.1.0",
 		"jquery": "^3.2.1",
 		"mtch": "^0.6.0",
 		"sxty4": "^0.10.0",
