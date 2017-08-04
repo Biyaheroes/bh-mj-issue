@@ -13,14 +13,14 @@ exports.config = {
 			"proxy": null
 		}
 	],
-	"sync": false,
+	"sync": true,
 	"logLevel": "verbose",
 	"coloredLogs": true,
 	"bail": 0,
 	"screenshotPath": "./",
 	"baseUrl": "http://localhost",
-	"waitforTimeout": 1000,
-	"connectionRetryTimeout": 1000,
+	"waitforTimeout": 10000,
+	"connectionRetryTimeout": 10000,
 	"connectionRetryCount": 10,
 	"services": [ "selenium-standalone" ],
 	"framework": "mocha",

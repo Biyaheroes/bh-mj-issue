@@ -1,9 +1,9 @@
 {
 	"name": "bh-mj-issue",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"description": "Biyaheroes MJML Issue Component.",
 	"main": "issue.deploy.js",
-	"support": "issue.jsx",
+	"support": "issue.module.jsx",
 	"authors": [
 		"Robot Biyaheroes <robot@biyaheroes.com>",
 		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"

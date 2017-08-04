@@ -63,14 +63,20 @@
 	@end-include
 */
 
+
+
+import $ from "jquery";
 import React, { PureComponent } from "react";
+import ReactDOM from "react-dom"
 
 import { MJMLElement } from "mjml-core";
 
 import Column from "mjml-column";
+import Raw from "mjml-raw";
 import Section from "mjml-section";
 import Text from "mjml-text";
 
+import booleanize from "booleanize";
 import mtch from "mtch";
 import sxty4 from "sxty4";
 import wichevr from "wichevr";
@@ -84,8 +90,10 @@ const endingTag = false;
 const defaultMJMLDefinition = {
 	"content": "",
 	"attributes": {
+		"name": "",
 		"error": "",
-		"message": "Sorry, there's an error. Please report this immediately."
+		"message": "Sorry, there's an error. Please report this immediately.",
+		"tracked": true
 	}
 };
 
@@ -94,10 +102,12 @@ class Issue extends PureComponent {
 	resolve( property ){
 		const { mjAttribute } = property;
 
-		let { error, message } = property;
+		let { name, error, message, tracked } = property;
 
+		name = wichevr( name, mjAttribute( "name" ) );
 		error = wichevr( error, mjAttribute( "error" ) );
 		message = wichevr( message, mjAttribute( "message" ) );
+		tracked = booleanize( wichevr( tracked, mjAttribute( "tracked" ) ) );
 
 		if( error instanceof Error ){
 			error = sxty4( error.stack ).encode( );
@@ -109,8 +119,10 @@ class Issue extends PureComponent {
 		}
 
 		return {
+			"name": name,
 			"error": error,
-			"message": message
+			"message": message,
+			"tracked": tracked
 		};
 	}
 
@@ -123,7 +135,7 @@ class Issue extends PureComponent {
 	}
 
 	render( ){
-		let { error, message } = this.state.data;
+		let { error, message, tracked } = this.state.data;
 
 		return (
 			<Section
@@ -145,17 +157,37 @@ class Issue extends PureComponent {
 								{ `Error: ${ error }` }
 							</Text>,
 
-							<Text
-								key="timestamp"
-								font-size="11px"
-							>
-								{ `Timestamp: ${ new Date( ) }` }
-							</Text>
+							tracked?
+								<Text
+									key="timestamp"
+									font-size="11px"
+								>
+									{ `Timestamp: ${ new Date( ) }` }
+								</Text>
+								: null
 						]
 					}
 				</Column>
 			</Section>
 		);
+	}
+
+	componentDidMount( ){
+		$( ReactDOM.findDOMNode( this ) )
+			.addClass( "bh-mj-issue" )
+			.addClass( this.state.data.name )
+			.append( `
+				<link
+					class="bh-mj-issue style"
+					rel="stylesheet"
+					type="text/css"
+					href="https://unpkg.com/bh-mj-issue/issue.css"
+				/>
+			` );
+	}
+
+	componentWillUnmount( ){
+		$( ".bh-mj-issue.style" ).remove( );
 	}
 }
 

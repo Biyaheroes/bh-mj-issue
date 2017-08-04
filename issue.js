@@ -63,14 +63,20 @@
               	@end-include
               */Object.defineProperty(exports, "__esModule", { value: true });var _jsx2 = require("babel-runtime/helpers/jsx");var _jsx3 = _interopRequireDefault(_jsx2);var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _createClass2 = require("babel-runtime/helpers/createClass");var _createClass3 = _interopRequireDefault(_createClass2);var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require("babel-runtime/helpers/inherits");var _inherits3 = _interopRequireDefault(_inherits2);var _class;
 
+
+
+var _jquery = require("jquery");var _jquery2 = _interopRequireDefault(_jquery);
 var _react = require("react");var _react2 = _interopRequireDefault(_react);
+var _reactDom = require("react-dom");var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _mjmlCore = require("mjml-core");
 
 var _mjmlColumn = require("mjml-column");var _mjmlColumn2 = _interopRequireDefault(_mjmlColumn);
+var _mjmlRaw = require("mjml-raw");var _mjmlRaw2 = _interopRequireDefault(_mjmlRaw);
 var _mjmlSection = require("mjml-section");var _mjmlSection2 = _interopRequireDefault(_mjmlSection);
 var _mjmlText = require("mjml-text");var _mjmlText2 = _interopRequireDefault(_mjmlText);
 
+var _booleanize = require("booleanize");var _booleanize2 = _interopRequireDefault(_booleanize);
 var _mtch = require("mtch");var _mtch2 = _interopRequireDefault(_mtch);
 var _sxty = require("sxty4");var _sxty2 = _interopRequireDefault(_sxty);
 var _wichevr = require("wichevr");var _wichevr2 = _interopRequireDefault(_wichevr);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
@@ -84,8 +90,10 @@ var endingTag = false;
 var defaultMJMLDefinition = {
 	"content": "",
 	"attributes": {
+		"name": "",
 		"error": "",
-		"message": "Sorry, there's an error. Please report this immediately." } };var
+		"message": "Sorry, there's an error. Please report this immediately.",
+		"tracked": true } };var
 
 
 
@@ -94,10 +102,12 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_PureComponent) {(0, _inhe
 		property) {var
 			mjAttribute = property.mjAttribute;var
 
-			error = property.error,message = property.message;
+			name = property.name,error = property.error,message = property.message,tracked = property.tracked;
 
+			name = (0, _wichevr2.default)(name, mjAttribute("name"));
 			error = (0, _wichevr2.default)(error, mjAttribute("error"));
 			message = (0, _wichevr2.default)(message, mjAttribute("message"));
+			tracked = (0, _booleanize2.default)((0, _wichevr2.default)(tracked, mjAttribute("tracked")));
 
 			if (error instanceof Error) {
 				error = (0, _sxty2.default)(error.stack).encode();
@@ -109,8 +119,10 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_PureComponent) {(0, _inhe
 			}
 
 			return {
+				"name": name,
 				"error": error,
-				"message": message };
+				"message": message,
+				"tracked": tracked };
 
 		} }, { key: "componentWillMount", value: function componentWillMount()
 
@@ -123,7 +135,7 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_PureComponent) {(0, _inhe
 		} }, { key: "render", value: function render()
 
 		{var _state$data =
-			this.state.data,error = _state$data.error,message = _state$data.message;
+			this.state.data,error = _state$data.error,message = _state$data.message,tracked = _state$data.tracked;
 
 			return (
 				_react2.default.createElement(_mjmlSection2.default,
@@ -142,20 +154,40 @@ Issue = (0, _mjmlCore.MJMLElement)(_class = function (_PureComponent) {(0, _inhe
 
 						"11px" }, "error", "Error: " +
 
-					error), (0, _jsx3.default)(_mjmlText2.default, { "font-size":
+					error),
 
 
+					tracked ? (0, _jsx3.default)(_mjmlText2.default, { "font-size":
 
 
 						"11px" }, "timestamp", "Timestamp: " +
 
-					new Date())])));
+					new Date()) :
+
+					null])));
+
+
+
+
+
+		} }, { key: "componentDidMount", value: function componentDidMount()
+
+		{
+			(0, _jquery2.default)(_reactDom2.default.findDOMNode(this)).
+			addClass("bh-mj-issue").
+			addClass(this.state.data.name).
+			append("\n\t\t\t\t<link\n\t\t\t\t\tclass=\"bh-mj-issue style\"\n\t\t\t\t\trel=\"stylesheet\"\n\t\t\t\t\ttype=\"text/css\"\n\t\t\t\t\thref=\"https://unpkg.com/bh-mj-issue/issue.css\"\n\t\t\t\t/>\n\t\t\t");
 
 
 
 
 
 
+
+		} }, { key: "componentWillUnmount", value: function componentWillUnmount()
+
+		{
+			(0, _jquery2.default)(".bh-mj-issue.style").remove();
 		} }]);return Issue;}(_react.PureComponent)) || _class;
 
 

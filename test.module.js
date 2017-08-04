@@ -59,20 +59,21 @@
 
 const assert = require( "should" );
 
-//: @bridge:
+//: @visual:
 const fs = require( "fs" );
+const kept = require( "kept" );
 const path = require( "path" );
 const same = require( "looks-same" );
 const scrshot = require( "scrshot" );
-//: @end-bridge
+//: @end-visual
 
-//: @bridge:
+//: @visual:
 describe( "bh-mj-issue", ( ) => {
 	let renderBase = path.resolve( __dirname, "render.base.png" );
 	let renderShot = path.resolve( __dirname, "render.test.png" );
 	describe( "render based comparison", ( ) => {
 		it( "should be equal", ( done ) => {
-			same( renderBase, renderShot, { "tolerance": 1 }, ( error, equal ) => {
+			same( renderBase, renderShot, { "strict": true }, ( error, equal ) => {
 				if( error instanceof Error ){
 					done( error );
 
@@ -84,15 +85,13 @@ describe( "bh-mj-issue", ( ) => {
 				}
 			} );
 		} );
-
-		after( ( ) => fs.unlinkSync( renderShot ) );
 	} );
 
 	let componentBase = path.resolve( __dirname, "component.base.png" );
 	let componentShot = path.resolve( __dirname, "component.test.png" );
 	describe( "component based comparison", ( ) => {
 		it( "should be equal", ( done ) => {
-			same( componentBase, componentShot, { "tolerance": 1 }, ( error, equal ) => {
+			same( componentBase, componentShot, { "strict": true }, ( error, equal ) => {
 				if( error instanceof Error ){
 					done( error );
 
@@ -104,8 +103,6 @@ describe( "bh-mj-issue", ( ) => {
 				}
 			} );
 		} );
-
-		after( ( ) => fs.unlinkSync( componentShot ) );
 	} );
 } );
-//: @end-bridge
+//: @end-visual
