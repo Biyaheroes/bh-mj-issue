@@ -44,7 +44,6 @@ module.exports = function build( parameter ){
 			"rules": [
 				{
 					"test": /\.jsx$/,
-					"exclude": /(node_modules|bower_components)/,
 					"use": [ "babel-loader" ]
 				},
 
@@ -135,6 +134,6 @@ module.exports = function build( parameter ){
 
 		"devtool": "#source-map",
 
-		"stats": { "warnings": false }
+		"stats": { "warnings": true }
 	}
 };
